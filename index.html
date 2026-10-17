@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunrise Hotel – Luxury Accommodation</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="#home" class="logo">Sunrise<span>Hotel</span></a>
+
+            <nav class="nav" id="nav" aria-label="Main">
+                <ul class="nav-list">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#rooms">Rooms</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#booking">Book a room</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="#booking" class="btn">Book now</a>
+                <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero" id="home">
+            <div class="container">
+                <h1>Welcome to Sunrise Hotel</h1>
+                <p>Where comfort, elegance, and exceptional hospitality create the perfect stay.</p>
+                <a href="#rooms" class="btn">Choose a room</a>
+            </div>
+        </section>
+
+        <!-- Rooms -->
+        <section class="section" id="rooms">
+            <div class="container">
+                <div class="section-head">
+                    <h2>Our rooms</h2>
+                    <p>Each room is designed with your comfort in mind.</p>
+                </div>
+
+                <div class="grid">
+                    <article class="card">
+                        <div class="card-img"><img src="public/single.jpg" alt="Single room" loading="lazy"></div>
+                        <div class="card-body">
+                            <h3>Single room</h3>
+                            <p>A cozy and comfortable room with all essential amenities. Perfect for solo travelers.</p>
+                            <div class="room-footer">
+                                <div class="room-price">2,000 ETB <small>/ night</small></div>
+                                <button class="btn btn--outline" type="button" data-room="single">Select</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-img"><img src="public/double.jpg" alt="Double room" loading="lazy"></div>
+                        <div class="card-body">
+                            <h3>Double room</h3>
+                            <p>A spacious room with two beds, designed for a relaxing and enjoyable stay.</p>
+                            <div class="room-footer">
+                                <div class="room-price">2,800 ETB <small>/ night</small></div>
+                                <button class="btn btn--outline" type="button" data-room="double">Select</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-img"><img src="public/luxury.jpg" alt="Luxury room" loading="lazy"></div>
+                        <div class="card-body">
+                            <h3>Luxury room</h3>
+                            <p>The perfect blend of comfort and elegance, with premium amenities and breathtaking views.</p>
+                            <div class="room-footer">
+                                <div class="room-price">3,500 ETB <small>/ night</small></div>
+                                <button class="btn btn--outline" type="button" data-room="luxury">Select</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section class="section section--alt" id="services">
+            <div class="container">
+                <div class="section-head">
+                    <h2>Our services</h2>
+                    <p>Experience luxury and comfort with our premium services.</p>
+                </div>
+
+                <div class="grid">
+                    <article class="card">
+                        <div class="card-img"><img src="public/food.jpg" alt="Room service" loading="lazy"></div>
+                        <div class="card-body">
+                            <h3>Room service</h3>
+                            <p>Delicious meals delivered to your room, 24/7.</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-img"><img src="public/spa.jpg" alt="Spa and wellness" loading="lazy"></div>
+                        <div class="card-body">
+                            <h3>Spa &amp; wellness</h3>
+                            <p>Relaxing treatments to rejuvenate your body and mind.</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-img"><img src="public/pool.jpg" alt="Swimming pool" loading="lazy"></div>
+                        <div class="card-body">
+                            <h3>Swimming pool</h3>
+                            <p>A temperature-controlled pool with comfortable loungers.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking -->
+        <section class="section" id="booking">
+            <div class="container">
+                <div class="section-head">
+                    <h2>Book your room</h2>
+                    <p>Send your details and we will contact you shortly to confirm.</p>
+                </div>
+
+                <div class="booking-form">
+                    <form id="bookingForm" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full name *</label>
+                                <input type="text" id="name" name="name" required placeholder="Enter your full name" autocomplete="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email address *</label>
+                                <input type="email" id="email" name="email" required placeholder="Enter your email" autocomplete="email">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="roomType">Room type *</label>
+                                <select id="roomType" name="roomType" required>
+                                    <option value="">Select a room type</option>
+                                    <option value="single">Single room – 2000 ETB/night</option>
+                                    <option value="double">Double room – 2800 ETB/night</option>
+                                    <option value="luxury">Luxury room – 3500 ETB/night</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="checkin">Check-in date *</label>
+                                <input type="date" id="checkin" name="checkin" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="services">Additional services (optional)</label>
+                                <select id="services" name="services">
+                                    <option value="">None</option>
+                                    <option value="spa">Spa &amp; wellness package</option>
+                                    <option value="airport">Airport transfer</option>
+                                    <option value="breakfast">Breakfast buffet</option>
+                                    <option value="dinner">Romantic dinner</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="nights">Number of nights *</label>
+                                <select id="nights" name="nights" required>
+                                    <option value="1">1 night</option>
+                                    <option value="2">2 nights</option>
+                                    <option value="3">3 nights</option>
+                                    <option value="4">4 nights</option>
+                                    <option value="5">5 nights</option>
+                                    <option value="6">6 nights</option>
+                                    <option value="7">7 nights</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-checkbox">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <label for="newsletter">Subscribe to our newsletter for special offers</label>
+                        </div>
+
+                        <div class="estimate" aria-live="polite">
+                            <span>Room total, before services</span>
+                            <strong id="estimateTotal">0 ETB</strong>
+                        </div>
+
+                        <button type="submit" class="btn submit-btn">Complete booking</button>
+                        <div class="form-message" id="formMessage" role="status"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3>Sunrise Hotel</h3>
+                    <p>Where comfort, elegance, and exceptional hospitality create the perfect stay.</p>
+                </div>
+
+                <div>
+                    <h3>Contact us</h3>
+                    <ul class="footer-list">
+                        <li>123 Luxury Avenue, Sunrise City, SC 10001</li>
+                        <li>+1 (555) 123-4567</li>
+                        <li>info@sunrisehotel.com</li>
+                        <li>24/7 front desk &amp; room service</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>Quick links</h3>
+                    <ul class="footer-list">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#rooms">Rooms</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#booking">Book your stay</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="year">2026</span> Sunrise Hotel. All rights reserved.</p>
+                <a href="admin.html" target="_blank" rel="noopener">Staff login</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

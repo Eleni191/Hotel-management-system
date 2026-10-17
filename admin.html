@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunrise Hotel – Admin</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+    <div class="dashboard">
+
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar" aria-label="Admin navigation">
+            <div class="admin-logo">
+                Sunrise Hotel
+                <small>Admin panel</small>
+            </div>
+
+            <nav class="nav-menu">
+                <a href="#" class="nav-item active"><span class="icon">📊</span> Dashboard</a>
+                <a href="#" class="nav-item"><span class="icon">➕</span> Add guest</a>
+                <a href="#" class="nav-item"><span class="icon">👥</span> View guests</a>
+                <a href="#" class="nav-item"><span class="icon">🛏️</span> Room status</a>
+                <a href="#" class="nav-item"><span class="icon">🗑️</span> Delete guest</a>
+                <a href="#" class="nav-item"><span class="icon">📄</span> Reports</a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <a href="index.html" class="nav-item nav-item--logout"><span class="icon">🚪</span> Log out</a>
+            </div>
+        </aside>
+
+        <div class="backdrop" id="backdrop"></div>
+
+        <!-- Main content -->
+        <main class="main-content">
+
+            <div class="top-bar">
+                <div class="top-left">
+                    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="sidebar">☰</button>
+                    <h1 class="page-title">Dashboard overview</h1>
+                </div>
+                <div class="user-welcome">
+                    <span class="avatar" aria-hidden="true">A</span>
+                    <span class="welcome-text">Welcome, Admin</span>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <section class="stats-grid" aria-label="Key numbers">
+                <div class="stat-card">
+                    <div class="stat-icon" aria-hidden="true">👥</div>
+                    <div>
+                        <div class="stat-number">24</div>
+                        <div class="stat-label">Total guests</div>
+                    </div>
+                </div>
+                <div class="stat-card stat-card--green">
+                    <div class="stat-icon" aria-hidden="true">🟢</div>
+                    <div>
+                        <div class="stat-number">12</div>
+                        <div class="stat-label">Available rooms</div>
+                    </div>
+                </div>
+                <div class="stat-card stat-card--red">
+                    <div class="stat-icon" aria-hidden="true">🔴</div>
+                    <div>
+                        <div class="stat-number">8</div>
+                        <div class="stat-label">Occupied rooms</div>
+                    </div>
+                </div>
+                <div class="stat-card stat-card--amber">
+                    <div class="stat-icon" aria-hidden="true">🔑</div>
+                    <div>
+                        <div class="stat-number">4</div>
+                        <div class="stat-label">Today's check-ins</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Room status (sample data, built in admin.js) -->
+            <section class="content-section">
+                <h2 class="section-title">Room status</h2>
+                <div class="legend">
+                    <span style="--dot: var(--green)">Available</span>
+                    <span style="--dot: var(--red)">Occupied</span>
+                    <span style="--dot: var(--amber)">Maintenance</span>
+                </div>
+                <div class="room-grid" id="roomGrid"></div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
